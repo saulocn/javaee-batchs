@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<job id="customCheckPoint">
+    <step id="firstChunkStep" >
+        <chunk item-count="3" checkpoint-policy="custom">
+            <reader ref="simpleChunkItemReader"/>
+            <processor ref="simpleChunkItemProcessor"/>
+            <writer ref="simpleChunkWriter"/>
+            <checkpoint-algorithm ref="customCheckPoint"/>
+        </chunk>
+    </step>
+</job>

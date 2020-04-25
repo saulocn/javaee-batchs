@@ -19,10 +19,11 @@ public class SimpleChunkItemReader extends AbstractItemReader {
         if (count >= tokens.length) {
             return null;
         }
-
+        final Integer token = tokens[count];
+        count++;
         System.out.println("Chunk: Executando a leitura do item "+ count);
         jobContext.setTransientUserData(count);
-        return tokens[count++];
+        return token;
     }
 
     @Override

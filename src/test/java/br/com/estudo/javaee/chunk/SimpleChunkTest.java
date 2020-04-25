@@ -20,4 +20,17 @@ public class SimpleChunkTest {
         jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
     }
+
+    @Test
+    public void givenChunk_whenCustomCheckPoint_thenCommitCountIsThree() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleChunkWithCustomCheckpoint", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        jobOperator.getStepExecutions(executionId)
+                .stream()
+                .map(BatchTestHelper::getCommitCount)
+                .forEach(count -> assertEquals(3L, count.longValue()));
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
 }
