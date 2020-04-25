@@ -40,18 +40,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.SimpleChunkTest.givenChunk_whenCustomCheckPoint_thenCommitCountIsThree">
-    <configuration name="SimpleBatchletTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudo-batch-javaee" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
-        <pattern testClass="br.com.estudo.javaee.chunk.SimpleChunkTest" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SimpleChunkTest and 1 more">
     <configuration name="SimpleBatchletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="estudo-batch-javaee" />
       <extension name="coverage">
@@ -79,6 +68,17 @@
       <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
       <option name="METHOD_NAME" value="givenBatchlet_thenBatch_completeWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleChunkTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="br.com.estudo.javaee.chunk.SimpleChunkTest" />
+        <pattern testClass="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleChunkTest and 1 more" />
         <item itemvalue="JUnit.SimpleChunkTest.givenChunk_whenCustomCheckPoint_thenCommitCountIsThree" />
         <item itemvalue="JUnit.SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" />
         <item itemvalue="JUnit.SimpleBatchletTest.givenBatchlet_thenBatch_completeWithSuccess" />
         <item itemvalue="JUnit.SimpleBatchletTest" />
-        <item itemvalue="JUnit.SimpleBatchletTest and 1 more" />
       </list>
     </recent_temporary>
   </component>
