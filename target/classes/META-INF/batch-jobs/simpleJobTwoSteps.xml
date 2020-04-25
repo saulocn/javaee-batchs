@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job id="simpleJobSequence">
+    <step id="firstChunkStepStep1" next="firstBatchStepStep2">
+        <chunk item-count="3">
+            <reader ref="simpleChunkItemReader"/>
+            <processor ref="simpleChunkItemProcessor"/>
+            <writer ref="simpleChunkWriter"/>
+        </chunk>
+    </step>
+    <step id="firstBatchStepStep2" >
+        <batchlet ref="simpleBatchLet"/>
+    </step>
+</job>
