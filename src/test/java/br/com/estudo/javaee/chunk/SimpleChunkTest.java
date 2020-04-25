@@ -1,7 +1,9 @@
 package br.com.estudo.javaee.chunk;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import javax.batch.operations.JobOperator;
@@ -92,5 +94,39 @@ public class SimpleChunkTest {
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
     }
 
+    @Test
+    public void givenSplit_thenBatch_CompletesWithSuccess() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleConcurrentJob", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        List<StepExecution> stepExecutions = jobOperator.getStepExecutions(executionId);
+
+        assertEquals(3, stepExecutions.size());
+        assertEquals("splitJobSequenceStep3", stepExecutions.get(2).getStepName());
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
+
+
+    @Test
+    public void givenSplit_thenBatch_CompletesWithSuccessAssertNames() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleConcurrentJob", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        List<StepExecution> stepExecutions = jobOperator.getStepExecutions(executionId);
+        List<String> executedSteps = new ArrayList<>();
+        for (StepExecution stepExecution : stepExecutions) {
+            executedSteps.add(stepExecution.getStepName());
+        }
+        assertEquals(3, stepExecutions.size());
+        assertTrue(executedSteps.contains("splitJobSequenceStep1"));
+        assertTrue(executedSteps.contains("splitJobSequenceStep2"));
+        assertTrue(executedSteps.contains("splitJobSequenceStep3"));
+        assertTrue(executedSteps.get(0).equals("splitJobSequenceStep1") || executedSteps.get(0).equals("splitJobSequenceStep2"));
+        assertTrue(executedSteps.get(1).equals("splitJobSequenceStep1") || executedSteps.get(1).equals("splitJobSequenceStep2"));
+        assertTrue(executedSteps.get(2).equals("splitJobSequenceStep3"));
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
 
 }

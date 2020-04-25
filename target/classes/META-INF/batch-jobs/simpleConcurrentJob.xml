@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job id="simpleJobSequence">
+    <split id="split1" next="splitJobSequenceStep3">
+        <flow id="flow1">
+            <step id="splitJobSequenceStep1">
+                <batchlet ref="simpleBatchLet" />
+            </step>
+        </flow>
+        <flow id="flow2">
+            <step id="splitJobSequenceStep2">
+                <batchlet ref="simpleBatchLet" />
+            </step>
+        </flow>
+    </split>
+    <step id="splitJobSequenceStep3">
+        <batchlet ref="simpleBatchLet" />
+    </step>
+</job>
