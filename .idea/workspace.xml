@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04db009d-3e10-45ee-b4f0-9cb65e485382" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b0Z2d7yPyFfNI3so3WIxoItuXv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="JUnit.SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess">
+    <configuration name="SimpleBatchletTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+        <pattern testClass="br.com.estudo.javaee.chunk.SimpleChunkTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleBatchletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.batchlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.batchlet" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleBatchletTest.givenBatchlet_thenBatch_completeWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.batchlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.batchlet" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+      <option name="METHOD_NAME" value="givenBatchlet_thenBatch_completeWithSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.chunk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
+      <option name="METHOD_NAME" value="givenChunk_thenBatch_completesWithSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="br.com.estudo.javaee.chunk.* and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="br.com.estudo.javaee.chunk.*" />
+        <pattern testClass="br.com.estudo.javaee.batchlet.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="estudo-batch-javaee" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="estudo-batch-javaee" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" />
+        <item itemvalue="JUnit.SimpleBatchletTest.givenBatchlet_thenBatch_completeWithSuccess" />
+        <item itemvalue="JUnit.SimpleBatchletTest" />
+        <item itemvalue="JUnit.SimpleBatchletTest and 1 more" />
+        <item itemvalue="JUnit.br.com.estudo.javaee.chunk.* and 1 more" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04db009d-3e10-45ee-b4f0-9cb65e485382" name="Default Changelist" comment="" />
+      <created>1587770765861</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587770765861</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="744" y="281" key="FileChooserDialogImpl" timestamp="1587833162436">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="744" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1587833162436" />
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom" timestamp="1587833012186">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587833012186" />
+    <state width="1874" height="277" key="GridCell.Tab.0.center" timestamp="1587833012185">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1874" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587833012185" />
+    <state width="1874" height="277" key="GridCell.Tab.0.left" timestamp="1587833012185">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1874" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587833012185" />
+    <state width="1874" height="277" key="GridCell.Tab.0.right" timestamp="1587833012186">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1874" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587833012186" />
+    <state x="494" y="181" key="Maven.ArtifactSearchDialog" timestamp="1587826253283">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="494" y="181" key="Maven.ArtifactSearchDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587826253283" />
+    <state x="444" y="101" key="SettingsEditor" timestamp="1587824948055">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="444" y="101" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1587824948055" />
+    <state x="758" y="303" key="chooseDestDirectoryDialog" timestamp="1587832115955">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="758" y="303" key="chooseDestDirectoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587832115955" />
+    <state x="664" y="266" width="592" height="518" key="find.popup" timestamp="1587770805116">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="664" y="266" width="592" height="518" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1587770805116" />
+    <state x="336" y="227" key="new project wizard" timestamp="1587771044063">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="336" y="227" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1587771044063" />
+  </component>
+</project>
