@@ -66,10 +66,20 @@ public class SimpleChunkTest {
     @Test
     public void givenTwoSteps_thenBatch_CompleteWithSuccess() throws Exception {
         JobOperator jobOperator = BatchRuntime.getJobOperator();
-        Long executionId = jobOperator.start("simpleJobTwoSteps", new Properties());
+        Long executionId = jobOperator.start("simpleTwoStepsJob", new Properties());
         JobExecution jobExecution = jobOperator.getJobExecution(executionId);
         jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
         assertEquals(2 , jobOperator.getStepExecutions(executionId).size());
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
+
+    @Test
+    public void givenFlow_thenBatch_CompleteWithSuccess() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleFlowJob", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        assertEquals(3, jobOperator.getStepExecutions(executionId).size());
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
     }
 }
