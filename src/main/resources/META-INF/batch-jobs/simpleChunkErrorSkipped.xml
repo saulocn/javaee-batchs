@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job id="simpleChunk">
+    <step id="firstChunkStep">
+        <chunk checkpoint-policy="item" item-count="3" skip-limit="3" retry-limit="3">
+            <reader ref="errorChunkItemReader"/> 
+            <processor ref="simpleChunkItemProcessor"/> 
+            <writer ref="simpleChunkWriter"/> 
+            <skippable-exception-classes>
+                <include class="java.lang.RuntimeException"/>
+                <include class="java.lang.UnsupportedOperationException"/>
+            </skippable-exception-classes>
+            <retryable-exception-classes>
+                <include class="java.lang.IllegalArgumentException"/>
+                <include class="java.lang.UnsupportedOperationException"/>
+            </retryable-exception-classes>
+        </chunk>
+    </step>
+</job>

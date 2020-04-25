@@ -27,7 +27,6 @@
             <version>${javaee_api.version}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>javax.batch</groupId>
             <artifactId>javax.batch-api</artifactId>
@@ -36,17 +35,17 @@
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-core</artifactId>
-            <version>1.0.2.Final</version>
+            <version>${jberet.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-support</artifactId>
-            <version>1.0.2.Final</version>
+            <version>${jberet.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jberet</groupId>
             <artifactId>jberet-se</artifactId>
-            <version>1.0.2.Final</version>
+            <version>${jberet.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -94,5 +93,6 @@
         <jboss-batch-api.version>1.0.0.Final</jboss-batch-api.version>
         <weld.version>2.1.1.Final</weld.version>
         <jboss-marshalling.version>1.4.2.Final</jboss-marshalling.version>
+        <jberet.version>1.0.2.Final</jberet.version>
     </properties>
 </project>

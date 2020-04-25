@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
-public class SimpleChunkItemReader extends AbstractItemReader {
+public class ErrorChunkItemReader extends AbstractItemReader {
     private StringTokenizer tokens;
     private Integer count=0;
 
@@ -18,10 +18,13 @@ public class SimpleChunkItemReader extends AbstractItemReader {
     @Override
     public Integer readItem() throws Exception {
         if (tokens.hasMoreTokens()) {
-            this.count++;
-            String tempTokenize = tokens.nextToken();
+            count++;
             jobContext.setTransientUserData(count);
-            return Integer.valueOf(tempTokenize);
+            int token = Integer.valueOf(tokens.nextToken());
+            if (token == 3) {
+                throw new RuntimeException("Something happened");
+            }
+            return Integer.valueOf(token);
         }
         return null;
     }

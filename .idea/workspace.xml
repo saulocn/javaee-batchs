@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04db009d-3e10-45ee-b4f0-9cb65e485382" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/customcheckpoint/CustomCheckPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs/simpleChunkWithCustomCheckpoint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/chunks/ErrorChunkItemReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs/simpleChunkError.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs/simpleChunkErrorSkipped.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/chunks/SimpleChunkItemReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/chunks/SimpleChunkItemReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/chunk/SimpleChunkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/chunk/SimpleChunkTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/chunks/SimpleChunkItemReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/chunks/SimpleChunkItemReader.class" afterDir="false" />
@@ -35,55 +37,32 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.SimpleChunkTest and 1 more">
-    <configuration name="SimpleBatchletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudo-batch-javaee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.estudo.javaee.batchlet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.batchlet" />
-      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleBatchletTest.givenBatchlet_thenBatch_completeWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudo-batch-javaee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.estudo.javaee.batchlet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.batchlet" />
-      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
-      <option name="METHOD_NAME" value="givenBatchlet_thenBatch_completeWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleChunkTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.estudo.javaee.chunks" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SimpleBatchletTest and 1 more">
+    <configuration name="SimpleBatchletTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="estudo-batch-javaee" />
       <option name="TEST_OBJECT" value="pattern" />
       <patterns>
-        <pattern testClass="br.com.estudo.javaee.chunk.SimpleChunkTest" />
         <pattern testClass="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+        <pattern testClass="br.com.estudo.javaee.chunk.SimpleChunkTest" />
       </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleChunkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="estudo-batch-javaee" />
       <extension name="coverage">
         <pattern>
@@ -93,7 +72,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
       <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
-      <option name="METHOD_NAME" value="givenChunk_thenBatch_completesWithSuccess" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleChunkTest.givenChunkError_thenErrorSkipped_CompletesWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.chunk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
+      <option name="METHOD_NAME" value="givenChunkError_thenErrorSkipped_CompletesWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,6 +104,22 @@
       <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
       <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
       <option name="METHOD_NAME" value="givenChunk_whenCustomCheckPoint_thenCommitCountIsThree" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleChunkTest.whenChunkError_thenBatch_CompletesWithFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.chunk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
+      <option name="METHOD_NAME" value="whenChunkError_thenBatch_CompletesWithFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SimpleChunkTest and 1 more" />
+        <item itemvalue="JUnit.SimpleBatchletTest and 1 more" />
+        <item itemvalue="JUnit.SimpleChunkTest" />
+        <item itemvalue="JUnit.SimpleChunkTest.givenChunkError_thenErrorSkipped_CompletesWithSuccess" />
         <item itemvalue="JUnit.SimpleChunkTest.givenChunk_whenCustomCheckPoint_thenCommitCountIsThree" />
-        <item itemvalue="JUnit.SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" />
-        <item itemvalue="JUnit.SimpleBatchletTest.givenBatchlet_thenBatch_completeWithSuccess" />
-        <item itemvalue="JUnit.SimpleBatchletTest" />
+        <item itemvalue="JUnit.SimpleChunkTest.whenChunkError_thenBatch_CompletesWithFailed" />
       </list>
     </recent_temporary>
   </component>
@@ -190,22 +200,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="744" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1587833162436" />
-    <state width="1874" height="277" key="GridCell.Tab.0.bottom" timestamp="1587834952566">
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom" timestamp="1587837473965">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587834952566" />
-    <state width="1874" height="277" key="GridCell.Tab.0.center" timestamp="1587834952566">
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587837473965" />
+    <state width="1874" height="277" key="GridCell.Tab.0.center" timestamp="1587837473965">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587834952566" />
-    <state width="1874" height="277" key="GridCell.Tab.0.left" timestamp="1587834952566">
+    <state width="1874" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587837473965" />
+    <state width="1874" height="277" key="GridCell.Tab.0.left" timestamp="1587837473965">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587834952566" />
-    <state width="1874" height="277" key="GridCell.Tab.0.right" timestamp="1587834952566">
+    <state width="1874" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587837473965" />
+    <state width="1874" height="277" key="GridCell.Tab.0.right" timestamp="1587837473965">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587834952566" />
+    <state width="1874" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587837473965" />
     <state x="494" y="181" key="Maven.ArtifactSearchDialog" timestamp="1587826253283">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -230,5 +240,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="336" y="227" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1587771044063" />
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1587837510220">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1587837510220" />
   </component>
 </project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job id="simpleChunk">
+    <step id="firstChunkStep">
+        <chunk checkpoint-policy="item" item-count="3" skip-limit="3" retry-limit="3">
+            <reader ref="errorChunkItemReader"/> 
+            <processor ref="simpleChunkItemProcessor"/> 
+            <writer ref="simpleChunkWriter"/> 
+        </chunk>
+    </step>
+</job>
