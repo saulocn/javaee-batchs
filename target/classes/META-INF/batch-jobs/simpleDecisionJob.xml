@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job id="simpleJobSequence">
+    <step id="firstBatchStepStep1" next="firstDecider">
+        <batchlet ref="simpleBatchLet" />
+    </step>
+    <decision id="firstDecider" ref="deciderJobSequence">
+        <next on="two" to="firstBatchStepStep2"/>
+        <next on="three" to="firstBatchStepStep3"/>
+    </decision>
+    <step id="firstBatchStepStep2">
+        <batchlet ref="simpleBatchLet" />
+    </step>
+    <step id="firstBatchStepStep3">
+        <chunk item-count="3">
+            <reader ref="simpleChunkItemReader"/>
+            <processor ref="simpleChunkItemProcessor"/>
+            <writer ref="simpleChunkWriter"/>
+        </chunk>
+    </step>
+</job>

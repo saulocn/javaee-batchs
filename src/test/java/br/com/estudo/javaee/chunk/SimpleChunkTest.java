@@ -82,4 +82,15 @@ public class SimpleChunkTest {
         assertEquals(3, jobOperator.getStepExecutions(executionId).size());
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
     }
+
+    @Test
+    public void givenDecisionFlow_thenBatch_CompleteWithSuccess() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleDecisionJob", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
+
+
 }
