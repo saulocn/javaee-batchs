@@ -20,4 +20,13 @@ public class SimpleBatchletTest {
         jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
     }
+    @Test
+    public void givenPartitionBatchlet_thenBatch_completeWithSuccess() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simplePartitionJob", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
+
 }

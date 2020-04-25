@@ -1,7 +1,13 @@
 package br.com.estudo.javaee.chunks;
 
+import javax.batch.api.BatchProperty;
 import javax.batch.api.chunk.ItemProcessor;
+import javax.batch.runtime.context.JobContext;
+import javax.batch.runtime.context.StepContext;
+import javax.inject.Inject;
 import javax.inject.Named;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Um chunk é um job que executa determinados passos.
@@ -15,6 +21,16 @@ import javax.inject.Named;
  */
 @Named
 public class SimpleChunkItemProcessor implements ItemProcessor {
+    @Inject
+    JobContext jobContext;
+
+    @Inject
+    StepContext stepContext;
+
+    @Inject
+    @BatchProperty(name = "name")
+    private String nameString;
+
     @Override
     public Integer processItem(Object t) {
         Integer item = (Integer) t;

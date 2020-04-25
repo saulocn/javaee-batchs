@@ -87,6 +87,11 @@
             <artifactId>jboss-marshalling</artifactId>
             <version>${jboss-marshalling.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
     </dependencies>
     <properties>
         <javaee_api.version>7.0</javaee_api.version>

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04db009d-3e10-45ee-b4f0-9cb65e485382" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs/simpleConcurrentJob.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs/simplePartitionJob.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/chunk/SimpleChunkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/chunk/SimpleChunkTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/estudo/javaee/chunk/SimpleChunkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/estudo/javaee/chunk/SimpleChunkTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/batchlet/SimpleBatchLet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/batchlet/SimpleBatchLet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/chunks/SimpleChunkItemProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/estudo/javaee/chunks/SimpleChunkItemProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/batchlet/SimpleBatchletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/estudo/javaee/batchlet/SimpleBatchletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/batchlet/SimpleBatchLet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/batchlet/SimpleBatchLet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/chunks/SimpleChunkItemProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/estudo/javaee/chunks/SimpleChunkItemProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/estudo/javaee/batchlet/SimpleBatchletTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/br/com/estudo/javaee/batchlet/SimpleBatchletTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,23 @@
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/batch-jobs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleChunkTest">
+  <component name="RunManager" selected="JUnit.SimpleBatchletTest.givenPartitionBatchlet_thenBatch_completeWithSuccess">
+    <configuration name="SimpleBatchletTest.givenPartitionBatchlet_thenBatch_completeWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="estudo-batch-javaee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.estudo.javaee.batchlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.batchlet" />
+      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.batchlet.SimpleBatchletTest" />
+      <option name="METHOD_NAME" value="givenPartitionBatchlet_thenBatch_completeWithSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleChunkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="estudo-batch-javaee" />
       <extension name="coverage">
@@ -61,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleChunkTest.givenDecisionFlow_thenBatch_CompleteWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="estudo-batch-javaee" />
       <extension name="coverage">
         <pattern>
@@ -71,23 +92,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
       <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
-      <option name="METHOD_NAME" value="givenDecisionFlow_thenBatch_CompleteWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SimpleChunkTest.givenFlow_thenBatch_CompleteWithSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="estudo-batch-javaee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.estudo.javaee.chunk.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="br.com.estudo.javaee.chunk" />
-      <option name="MAIN_CLASS_NAME" value="br.com.estudo.javaee.chunk.SimpleChunkTest" />
-      <option name="METHOD_NAME" value="givenFlow_thenBatch_CompleteWithSuccess" />
+      <option name="METHOD_NAME" value="givenChunk_thenBatch_completesWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleBatchletTest.givenPartitionBatchlet_thenBatch_completeWithSuccess" />
+        <item itemvalue="JUnit.SimpleChunkTest.givenChunk_thenBatch_completesWithSuccess" />
         <item itemvalue="JUnit.SimpleChunkTest" />
         <item itemvalue="JUnit.SimpleChunkTest.givenSplit_then2Batch_CompletesWithSuccess" />
         <item itemvalue="JUnit.SimpleChunkTest.givenSplit_thenBatch_CompletesWithSuccess" />
-        <item itemvalue="JUnit.SimpleChunkTest.givenDecisionFlow_thenBatch_CompleteWithSuccess" />
-        <item itemvalue="JUnit.SimpleChunkTest.givenFlow_thenBatch_CompleteWithSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -200,26 +205,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="744" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1587833162436" />
-    <state width="1874" height="277" key="GridCell.Tab.0.bottom" timestamp="1587839458416">
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom" timestamp="1587840844339">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587839458416" />
-    <state width="1874" height="277" key="GridCell.Tab.0.center" timestamp="1587839458416">
+    <state width="1874" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587840844339" />
+    <state width="1874" height="277" key="GridCell.Tab.0.center" timestamp="1587840844338">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587839458416" />
-    <state width="1874" height="277" key="GridCell.Tab.0.left" timestamp="1587839458415">
+    <state width="1874" height="277" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587840844338" />
+    <state width="1874" height="277" key="GridCell.Tab.0.left" timestamp="1587840844338">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587839458415" />
-    <state width="1874" height="277" key="GridCell.Tab.0.right" timestamp="1587839458416">
+    <state width="1874" height="277" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587840844338" />
+    <state width="1874" height="277" key="GridCell.Tab.0.right" timestamp="1587840844339">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1874" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587839458416" />
-    <state x="494" y="181" key="Maven.ArtifactSearchDialog" timestamp="1587826253283">
+    <state width="1874" height="277" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587840844339" />
+    <state x="494" y="181" key="Maven.ArtifactSearchDialog" timestamp="1587839988192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="494" y="181" key="Maven.ArtifactSearchDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587826253283" />
+    <state x="494" y="181" key="Maven.ArtifactSearchDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587839988192" />
     <state x="682" y="207" key="RollbackChangesDialog" timestamp="1587834561562">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
