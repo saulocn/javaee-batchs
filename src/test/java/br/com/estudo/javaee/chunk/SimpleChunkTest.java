@@ -5,11 +5,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import javax.batch.operations.JobOperator;
 import javax.batch.runtime.BatchRuntime;
 import javax.batch.runtime.BatchStatus;
 import javax.batch.runtime.JobExecution;
+import javax.batch.runtime.Metric;
 import javax.batch.runtime.StepExecution;
 
 import br.com.estudo.javaee.BatchTestHelper;
@@ -127,6 +129,24 @@ public class SimpleChunkTest {
         assertTrue(executedSteps.get(1).equals("splitJobSequenceStep1") || executedSteps.get(1).equals("splitJobSequenceStep2"));
         assertTrue(executedSteps.get(2).equals("splitJobSequenceStep3"));
         assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+    }
+
+
+    @Test
+    public void givenChunk_whenJobStarts_thenStepsHaveMetrics() throws Exception {
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
+        Long executionId = jobOperator.start("simpleChunk", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
+        jobExecution = BatchTestHelper.keepTestAlive(jobExecution);
+        assertEquals(jobExecution.getBatchStatus(), BatchStatus.COMPLETED);
+        assertTrue(jobOperator.getJobNames().contains("simpleChunk"));
+        assertTrue(jobOperator.getParameters(executionId).isEmpty());
+        StepExecution stepExecution = jobOperator.getStepExecutions(executionId).get(0);
+        Map<Metric.MetricType, Long> metricTest = BatchTestHelper.getMetricsMap(stepExecution.getMetrics());
+        assertEquals(10L, metricTest.get(Metric.MetricType.READ_COUNT).longValue());
+        assertEquals(5L, metricTest.get(Metric.MetricType.FILTER_COUNT).longValue());
+        assertEquals(4L, metricTest.get(Metric.MetricType.COMMIT_COUNT).longValue());
+        assertEquals(5L, metricTest.get(Metric.MetricType.WRITE_COUNT).longValue());
     }
 
 }
